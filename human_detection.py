@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import time
-//from google.colab.patches import cv2_imshow
+# from google.colab.patches import cv2_imshow
 net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
 with open("coco.names", "r") as f: classes = [line.strip() for line in f.readlines()]
 layer_names = net.getLayerNames()
@@ -11,6 +11,7 @@ cap = cv2.VideoCapture("sample.mp4")
 font = cv2.FONT_HERSHEY_PLAIN
 starting_time = time.time()
 frame_id = 0
+result = cv2.VideoWriter('filename.mp4', cv2.VideoWriter_fourcc(*'MJPG'),25, (640, 352))
 while True:
     _, frame = cap.read()
     frame_id += 1
@@ -48,7 +49,8 @@ while True:
     elapsed_time = time.time() - starting_time
     fps = frame_id / elapsed_time
     cv2.putText(frame, "FPS: " + str(round(fps, 2)), (10, 50), font, 2, (0, 0, 0), 3)
-    //cv2_imshow(frame)
+    result.write(frame)
+    # cv2_imshow(frame)
     if cv2.waitKey(1) ==ord('q'):
         break
 cap.release()
