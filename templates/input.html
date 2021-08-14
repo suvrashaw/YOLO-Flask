@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>YOLOv3</title>
+    </head>
+    <body bgcolor=#d4a3ae>
+        <center>
+            <div style="padding-top: 160px; font-family:Georgia, 'Times New Roman', Times, serif">
+                <h1 style="font-size: 30px;"> YOLO V3 INPUT SHOW </h1><br>
+                <form action = "http://localhost:5000/uploader" method = "POST" enctype = "multipart/form-data">
+                    <input type = "file" name = "file" />
+                    <input type = "submit"/>
+                </form>
+            </div>
+            <div style="padding-top: 6px; font-family:Georgia, 'Times New Roman', Times, serif">
+                <h1 style="font-size: 30px;"> SAM,PLE INPUT </h1><br>
+                <video width="320" height="240" controls>
+                    <source src={{ url_for('static', filename="input.mp4") }} type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </center>
+    </body>
+</html>
