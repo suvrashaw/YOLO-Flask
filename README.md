@@ -1,8 +1,6 @@
-### **[yolov3.weights](https://drive.google.com/file/d/1Nb5nB7pIsxhsBGDFZd37yUfRj-V6V5MM/view?usp=sharing) ![badge](https://img.shields.io/github/repo-size/suvrashaw/YOLO-Flask?style=plastic)**
-
 ![cover](static/cover.png)
 
-# YOLOv3 Human Detection Program
+# YOLOv3 Human Detection ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=plastic&logo=flask&logoColor=white) ![heroku](https://img.shields.io/badge/%E2%86%91_Deployed_to-Heroku-7056bf.svg?style=plastic) ![badge](https://img.shields.io/github/repo-size/suvrashaw/YOLO-Flask?style=plastic)
 
 There is an object detection algorithm called YOLO (You Only Live Once). In this case, the entire image is processed by a single neural network. Image regions are divided up by this network. It then forecast boxes and probabilities for each region. A probability distribution is applied to these bounding boxes in order to determine their weighting.
 
