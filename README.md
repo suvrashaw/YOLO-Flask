@@ -1,6 +1,6 @@
 ### **[yolov3.weights](https://drive.google.com/file/d/1Nb5nB7pIsxhsBGDFZd37yUfRj-V6V5MM/view?usp=sharing) ![badge](https://img.shields.io/github/repo-size/suvrashaw/YOLO-Flask?style=plastic)**
 
-![cover](images/cover.png)
+![cover](static/cover.png)
 
 # YOLOv3 Human Detection Program
 
@@ -30,7 +30,7 @@ There is an object detection algorithm called YOLO (You Only Live Once). In this
     cap = cv2.VideoCapture("sample.mp4")
     ```
 
-    ![input](images/input.png)
+    ![input](static/input.png)
 
 
 - Set the label font for YOLO detction.
@@ -102,4 +102,4 @@ There is an object detection algorithm called YOLO (You Only Live Once). In this
     cv2.destroyAllWindows()
     ```
 
-    ![input](images/output.png)
+    ![input](static/output.png)
