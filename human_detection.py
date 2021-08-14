@@ -7,7 +7,7 @@ with open("coco.names", "r") as f: classes = [line.strip() for line in f.readlin
 layer_names = net.getLayerNames()
 output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 colors = np.random.uniform(0, 255, size=(len(classes), 3))
-cap = cv2.VideoCapture("sample.mp4")
+cap = cv2.VideoCapture("input.mp4")
 font = cv2.FONT_HERSHEY_PLAIN
 starting_time = time.time()
 frame_id = 0
@@ -50,7 +50,7 @@ while True:
     fps = frame_id / elapsed_time
     cv2.putText(frame, "FPS: " + str(round(fps, 2)), (10, 50), font, 2, (0, 0, 0), 3)
     result.write(frame)
-    # cv2_imshow(frame)
+    cv2.imshow(frame)
     if cv2.waitKey(1) ==ord('q'):
         break
 cap.release()
